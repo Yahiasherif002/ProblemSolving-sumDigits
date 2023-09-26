@@ -1,23 +1,21 @@
 ﻿internal class Program
 {
-    static void sumArray(int[] arr)
-    {
-        int sum = 0;
-        foreach (int i in arr)
-        {
-            sum += i;
-        }
-        Console.WriteLine(sum);
-    }
+  
     private static void Main(string[] args)
     {
-        int n = Convert.ToInt32(Console.ReadLine());
-        int[] arr = new int[n];
-        string[] arrItems = Console.ReadLine().Split(' ');
-        for (int i = 0; i < n; i++)
-        {
-            arr[i] = Convert.ToInt32(arrItems[i]);
+        
+            int n = int.Parse(Console.ReadLine());
+            string digits = Console.ReadLine();
+
+            int sum = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                int digit = digits[i] - '0'; // Convert the character to an integer
+                sum += digit;
+            }
+
+            Console.WriteLine(sum);
         }
-        sumArray(arr);
     }
-}
+
